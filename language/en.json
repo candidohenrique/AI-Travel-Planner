@@ -1,0 +1,11 @@
+{
+    "language_selected": "en",
+    "welcome": "Welcome to the AI Travel Planner! How can I help you plan your next adventure?",
+    "menu": {
+        "title": "Choose an option: ",
+        "options": "1 - Plan a trip\n2 - Exit",
+        "choice": "Your choice: "
+    },
+    "destination": "Where would you like to travel? ",
+    "duration": "How many days do you plan to stay? "
+}

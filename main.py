@@ -1,0 +1,24 @@
+from agents.travel_agent import planejar_viagem
+from setings import defined_language
+import os
+
+
+mensagem = defined_language()
+idioma = mensagem['language_selected']
+os.system('cls')    
+
+
+print(mensagem['welcome'])
+while True:
+    print(mensagem['menu']['title'])
+    print(mensagem['menu']['options'])
+    escolha = input(mensagem['menu']['choice'])
+
+    if escolha == '1':
+        destino = input(mensagem['destination'])
+        duracao = int(input(mensagem['duration']))
+
+        plano = planejar_viagem(destino, duracao, idioma)
+        print(plano)
+    elif escolha == '2':
+        break
