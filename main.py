@@ -1,5 +1,5 @@
 from agents.travel_agent import planejar_viagem
-from setings import defined_language
+from settings import defined_language
 import os
 
 
@@ -12,13 +12,19 @@ print(mensagem['welcome'])
 while True:
     print(mensagem['menu']['title'])
     print(mensagem['menu']['options'])
-    escolha = input(mensagem['menu']['choice'])
+    try:
+        escolha = int(input(mensagem['menu']['choice']))
+    except ValueError:
+        print(mensagem['value_error'])
+        continue
 
-    if escolha == '1':
+    if escolha == 1:
         destino = input(mensagem['destination'])
         duracao = int(input(mensagem['duration']))
 
         plano = planejar_viagem(destino, duracao, idioma)
         print(plano)
-    elif escolha == '2':
+    elif escolha == 2:
         break
+    else:
+        print(mensagem['invalid_option'])

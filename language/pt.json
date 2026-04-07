@@ -6,6 +6,8 @@
         "options": "1 - Planejar uma viagem\n2 - Sair",
         "choice": "Sua escolha: "
     },
+    "invalid_option": "Opção inválida. Por favor, tente novamente.",
+    "value_error": "Valor inválido. Por favor, insira um número.",
     "destination": "Para onde você gostaria de viajar? ",
     "duration": "Quantos dias você planeja ficar? "
 }

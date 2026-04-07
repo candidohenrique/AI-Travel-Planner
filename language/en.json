@@ -6,6 +6,8 @@
         "options": "1 - Plan a trip\n2 - Exit",
         "choice": "Your choice: "
     },
+    "invalid_option": "Invalid option. Please try again.",
+    "value_error": "Invalid value. Please enter a number.",
     "destination": "Where would you like to travel? ",
     "duration": "How many days do you plan to stay? "
 }
