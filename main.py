@@ -1,30 +1,32 @@
-from agents.travel_agent import planejar_viagem
+from agents.travel_agent import plan_trip
 from settings import defined_language
 import os
 
 
-mensagem = defined_language()
-idioma = mensagem['language_selected']
-os.system('cls')    
+messages = defined_language()
+idioma = messages['language_selected']
+os.system('cls' if os.name == 'nt' else 'clear')
 
+print(messages['welcome'])
 
-print(mensagem['welcome'])
 while True:
-    print(mensagem['menu']['title'])
-    print(mensagem['menu']['options'])
+    print(messages['menu']['title'])
+    print(messages['menu']['options'])
+    
     try:
-        escolha = int(input(mensagem['menu']['choice']))
+        choise = int(input(messages['menu']['choice']))
     except ValueError:
-        print(mensagem['value_error'])
+        print(messages['value_error'])
         continue
 
-    if escolha == 1:
-        destino = input(mensagem['destination'])
-        duracao = int(input(mensagem['duration']))
+    if choise == 1:
+        destination = input(messages['destination'])
+        duration = int(input(messages['duration']))
 
-        plano = planejar_viagem(destino, duracao, idioma)
-        print(plano)
-    elif escolha == 2:
+        plan_trip = plan_trip(destination, duration, language)
+        print(plan_trip)
+
+    elif choise == 2:
         break
     else:
-        print(mensagem['invalid_option'])
+        print(messages['invalid_option'])
